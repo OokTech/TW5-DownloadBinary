@@ -1,0 +1,24 @@
+title: $:/plugins/OokTech/DownloadBinary/readme
+
+This is a plugin designed to test out some functionality for the core. It adds
+an action widget that lets you download the files contained in base64 encoded
+tiddlers.
+
+If you import an image into a tiddlywiki the image gets converted into a base64
+string and that string is stored in the text field of a tiddler. This works in
+the wiki but there isn't any direct way built-in to get the original file back.
+
+This widget gives a way to do that.
+
+!!Usage
+
+```
+<$button>
+Download Media
+<$action-downloadbinary tiddler=someImageTiddler/>
+</$button>
+```
+
+|!Parameter |!Description |
+|!tiddler |The tiddler with the data to export. |
+|!name |(option) The default file name. Default: the tiddler name |
